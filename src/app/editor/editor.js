@@ -18,6 +18,9 @@ document.head.appendChild(yo`
     .ace-tm .ace_gutter-active-line,
     .ace-tm .ace_marker-layer .ace_active-line {
         background-color: rgba(225, 229, 251, 0.5);
+    }  
+    .ace_gutter-cell.ace_breakpoint{
+      background-color: hsla(0, 82%, 82%, 1); /* red in style-guide.js */
     }
   </style>
 `)
