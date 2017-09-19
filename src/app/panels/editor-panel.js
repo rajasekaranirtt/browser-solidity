@@ -123,7 +123,7 @@ var css = csjs`
   }
   .banner     {
     width             : 25em;
-  }  
+  }
 `
 
 var cssTabs = yo`<style>
