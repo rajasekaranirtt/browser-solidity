@@ -80,6 +80,17 @@ var css = csjs`
     bottom             : 0;
     overflow           : hidden;
   }
+  .highlightcode {
+      position:absolute;
+      z-index:20;
+      background-color: ${styles.colors.lightOrange};
+  }
+  .highlightcode_fullLine {
+      position:absolute;
+      z-index:20;
+      background-color: ${styles.colors.lightOrange};
+      opacity: 0.5;
+  }
 `
 
 class App {
@@ -509,7 +520,7 @@ function run () {
         if (config.get('currentFile') !== this.source) {
           fileManager.switchFile(this.source)
         }
-        this.statementMarker = editor.addMarker(lineColumnPos, this.source, 'highlightcode')
+        this.statementMarker = editor.addMarker(lineColumnPos, this.source, css.highlightcode)
         editor.scrollToLine(lineColumnPos.start.line, true, true, function () {})
         if (lineColumnPos.start.line === lineColumnPos.end.line) {
           this.fullLineMarker = editor.addMarker({
@@ -521,7 +532,7 @@ function run () {
               line: lineColumnPos.start.line + 1,
               column: 0
             }
-          }, this.source, 'highlightcode_fullLine')
+          }, this.source, css.highlightcode_fullLine)
         }
       }
     },
