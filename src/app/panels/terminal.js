@@ -36,6 +36,7 @@ var css = csjs`
     z-index           : 3;
   }
   .menu               {
+    color             : ${styles.colors.black};
     position          : relative;
     display           : flex;
     align-items       : center;
@@ -98,6 +99,7 @@ var css = csjs`
   .filter             {
     ${styles.inputField}
     width             : 150px;
+    min-width         : 100px;
   }
 
   .dragbarHorizontal  {
@@ -119,6 +121,12 @@ var css = csjs`
     z-index           : 9999;
     left              : 0;
     right             : 0;
+  }
+  .listenOnNetwork {
+    width             : 120px;
+    min-width         : 120px;
+    overflow          : hidden;
+    display           : flex;
   }
 `
 
@@ -216,7 +224,10 @@ class Terminal {
           </div>
           ${self._view.dropdown}
           <input type="text" class=${css.filter} onkeyup=${filter}></div>
-          <input onchange=${listenOnNetwork} type="checkbox" /><label title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created from the GUI">Listen on network</label>
+          <div class=${css.listenOnNetwork}>
+            <input onchange=${listenOnNetwork} type="checkbox"/>
+            <label title="If checked Remix will listen on all transactions mined in the current environment and not only transactions created from the GUI">Listen on network</label>
+          </div>
           ${self._view.icon}
         </div>
       </div>

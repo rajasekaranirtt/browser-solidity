@@ -344,16 +344,17 @@ var rightPanel = {
 ALL:
 - text: mainText or supportText
 
+
+---
+
 DEBUGGER TAB:
-- DropdownPanel.js - refactor css
+DONE - DropdownPanel.js - refactor css
   - apply ${styles.dropdown} to Debugger
   - apply ${styles.button} + the rest (copy styling from below) to `eye button`
     ${styles.button}
     margin: 3px;
     float: right;
 
----
-DONE
 ALL:
 DONE - unify color and hover for all icons (files panel, debuger, toggle etc.)
 

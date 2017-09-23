@@ -2,10 +2,15 @@
 
 var EventManager = require('ethereum-remix').lib.EventManager
 var yo = require('yo-yo')
-var csjs = require('csjs-inject')
 var ace = require('brace')
 var Range = ace.acequire('ace/range').Range
 require('./mode-solidity.js')
+
+// -------------- styling ----------------------
+var csjs = require('csjs-inject')
+var remix = require('ethereum-remix')
+var styleGuide = remix.ui.styleGuide
+var styles = styleGuide()
 
 var css = csjs`
   .ace-editor {
@@ -17,10 +22,10 @@ document.head.appendChild(yo`
     .ace-tm .ace_gutter,
     .ace-tm .ace_gutter-active-line,
     .ace-tm .ace_marker-layer .ace_active-line {
-        background-color: rgba(225, 229, 251, 0.5);
-    }  
+        background-color: ${styles.colors.backgroundBlue};
+    }
     .ace_gutter-cell.ace_breakpoint{
-      background-color: hsla(0, 82%, 82%, 1); /* red in style-guide.js */
+      background-color: ${styles.colors.red};
     }
   </style>
 `)

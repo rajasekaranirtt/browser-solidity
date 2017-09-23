@@ -35,7 +35,9 @@ var css = csjs`
   .menu               {
     height            : 2em;
     margin-top        : 0.5em;
-    flex-shrink       : 0;
+    width             : 160px;
+    min-width         : 160px;
+    overflow          : hidden;
   }
   .newFile            {
     padding           : 10px;

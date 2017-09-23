@@ -32,7 +32,7 @@ var css = csjs`
     position          : relative;
     list-style        : none;
     margin            : 0;
-    font-size         : 15px;
+    font-size         : 1.1em;
     height            : 2.5em;
     box-sizing        : border-box;
     line-height       : 2em;
@@ -134,35 +134,32 @@ var cssTabs = yo`<style>
 #files .file {
       padding: 0 0.6em;
       box-sizing: border-box;
-      background-color: hsla(229, 100%, 97%, 1); /* backgroundBlue in style-guide.js */
+      background-color: ${styles.colors.backgroundBlue};
       cursor: pointer;
       border-right: 0.5em solid white;
       position: relative;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      color: hsla(0, 0%, 40%, 1); /* grey in style-guide.js */
+      color: ${styles.colors.grey};
   }
   #files .file.active {
-      color: black;
+      color: ${styles.colors.black};;
       font-weight: bold;
       border-bottom: 0 none;
-      padding-right: 2em;
+      padding-right: 1.5em;
   }
   #files .file .remove {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 1.25em;
-      width: 1.25em;
-      line-height: 1em;
-      color: hsla(0, 82%, 82%, 1); /* red in style-guide.js */
-      display: none;
-      margin: 0.4em;
-      text-align: center;
+    font-size: 12px;
+    display: flex;
+    color: ${styles.colors.black};
+    position: absolute;
+    top: -7px;
+    right: 5px;
+    display: none;
   }
   #files .file input {
-      background-color: transparent;
+      background-color: ${styles.colors.transparent};
       border: 0 none;
       border-bottom: 1px dotted black;
       line-height: 1em;
