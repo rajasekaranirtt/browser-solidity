@@ -59,6 +59,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .centerpanel         {
+    background-color  : ${styles.colors.general_BackgroundColor};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -67,6 +68,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .leftpanel           {
+    background-color  : ${styles.colors.general_BackgroundColor};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -76,6 +78,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .rightpanel          {
+    background-color  : ${styles.colors.general_BackgroundColor};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
