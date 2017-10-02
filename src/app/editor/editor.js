@@ -14,8 +14,8 @@ var styles = styleGuide()
 
 var css = csjs`
   .ace-editor {
-    background-color  : ${styles.colors.general_BackgroundColor};
-    border-top: 20px solid ${styles.colors.backgroundBlue};
+    background-color  : ${styles.editor.backgroundColor_Editor};
+    border-top: 20px solid ${styles.editor.backgroundColor_Tabs_Highlights};
     width     : 100%;
   }
 `
@@ -24,10 +24,10 @@ document.head.appendChild(yo`
     .ace-tm .ace_gutter,
     .ace-tm .ace_gutter-active-line,
     .ace-tm .ace_marker-layer .ace_active-line {
-        background-color: ${styles.colors.backgroundBlue};
+        background-color: ${styles.editor.backgroundColor_Tabs_Highlights};
     }
     .ace_gutter-cell.ace_breakpoint{
-      background-color: ${styles.colors.red};
+      background-color: ${styles.editor.backgroundColor_DebuggerMode};
     }
   </style>
 `)

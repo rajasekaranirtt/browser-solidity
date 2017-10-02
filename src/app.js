@@ -46,7 +46,7 @@ var css = csjs`
     margin             : 0;
     padding            : 0;
     font-size          : 12px;
-    color              : ${styles.colors.black};
+    color              : ${styles.leftPanel.text_Primary};
     font-weight        : normal;
   }
   pre {
@@ -59,7 +59,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .centerpanel         {
-    background-color  : ${styles.colors.general_BackgroundColor};
+    background-color  : ${styles.colors.transparent};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -68,7 +68,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .leftpanel           {
-    background-color  : ${styles.colors.general_BackgroundColor};
+    background-color  : ${styles.leftPanel.backgroundColor_Panel};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -78,7 +78,7 @@ var css = csjs`
     overflow           : hidden;
   }
   .rightpanel          {
-    background-color  : ${styles.colors.general_BackgroundColor};
+    background-color  : ${styles.rightPanel.backgroundColor_Panel};
     display            : flex;
     flex-direction     : column;
     position           : absolute;
@@ -90,12 +90,12 @@ var css = csjs`
   .highlightcode {
     position:absolute;
     z-index:20;
-    background-color: ${styles.colors.lightOrange};
+    background-color: ${styles.editor.backgroundColor_DebuggerMode};
   }
   .highlightcode_fullLine {
     position:absolute;
     z-index:20;
-    background-color: ${styles.colors.lightOrange};
+    background-color: ${styles.editor.backgroundColor_DebuggerMode};
     opacity: 0.5;
   }
 `
